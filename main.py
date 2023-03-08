@@ -12,7 +12,6 @@ while True:
 
     print_menu()
     response = input()
-    print(f"response: {response}")
     if response != '1' and response != '2' and response != '3':
         print("Please submit the number of the data that you want")
     elif response == '1':

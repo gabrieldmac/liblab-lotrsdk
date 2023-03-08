@@ -16,22 +16,22 @@ def get_movies():
 
     headers = {'Authorization' : 'Bearer ' + ACCESS_TOKEN}
     response = requests.get(BASE_URL_MOVIE,headers=headers)
-    print(response.text)
+    
+    return response.json
 
 # Get a details from one specific movie
 def get_one_movie(id):
     
     headers = {'Authorization' : 'Bearer ' + ACCESS_TOKEN}
     response = requests.get(f"{BASE_URL_MOVIE}/{id}",headers=headers)
-    print(response.text)
+    
+    return response.json
 
 # get all quotes from one movie - Only works for the thrilogy
 def get_quote_fom_movie(id):
     
     headers = {'Authorization' : 'Bearer ' + ACCESS_TOKEN}
     response = requests.get(f"{BASE_URL_MOVIE}/{id}/quote",headers=headers)
-    print(response.text)
-
-# get_quote_fom_movie('5cd95395de30eff6ebccde5c')
-
-# 5cd95395de30eff6ebccde5c fellowship of the ring
+    
+    return response.json
+    
